@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: test
+Parameters:
+LambdaName:
+    Description: "index-photos-test"
+    Type: "String"
+LambdaDescription:
+    Description: ""
+    Type: "String"
+LambdaRole:
+    Description: ""
+    Type: "String"
+Resources:
+  LambdaInstagramWrapper:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Role: !Ref LambdaRole
+      FunctionName: !Ref LambdaName
+      MemorySize: 512
+      Timeout: 60
+      Handler: .
+      Runtime: python3.7
+      CodeUri: .
+      Description: !Ref LambdaDescription
