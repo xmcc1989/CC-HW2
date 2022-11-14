@@ -3,7 +3,7 @@ Transform: 'AWS::Serverless-2016-10-31'
 Description: test
 Resources:
   myLambdaFunction:
-    Type: 'AWS::Serverless::Function'
+    Type: AWS::Serverless::Function
     Properties:
       Handler: myLambdaFunction.lambda_handler
       Runtime: python3.7
