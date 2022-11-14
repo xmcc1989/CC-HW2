@@ -5,7 +5,6 @@ phases:
    python: 3.7
  build: 
   commands:
-   - sam build
    - sam package --template-file template.yml --s3-bucket b0deploy --output-template-file output-template.yml
 artifacts:
  type: zip
