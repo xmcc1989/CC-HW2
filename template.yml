@@ -1,11 +1,11 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Transform: AWS::Serverless-2016-10-3
-Description: test
+Transform: AWS::Serverless-2016-10-31
+Description: Python file including external library
 Resources:
-  myLambdaFunction:
-    Type: AWS::Serverless::Function
-    Properties:
-      FunctionName: myLambdaFunction
-      Handler: LF1_index-photos.lambda_handler
-      Runtime: python3.7
-      CodeUri: ./lambda
+ SampleFunction:
+  Type: AWS::Serverless::Function
+  Properties:
+   Handler: Index.lambda_handler
+   Runtime: python3.7
+   FunctionName: SamplePython
+   CodeUri: ./src #Directory the source file is

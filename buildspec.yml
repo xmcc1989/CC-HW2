@@ -5,9 +5,11 @@ phases:
    python: 3.7
  build: 
   commands:
-   - sam package --template-file template.yml --s3-bucket b0deploy --output-template-file output-template.yml
+   - sam build
+   - export BUCKET=test-pipeline-output-bucket
+   - sam package --s3-bucket $BUCKET --output-template-file outputtemplate.yml
 artifacts:
  type: zip
  files:
   - template.yml
-  - output-template.yml
+  - outputtemplate.yml
