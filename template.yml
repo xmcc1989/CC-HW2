@@ -21,5 +21,5 @@ Resources:
       Timeout: 60
       Handler: .
       Runtime: python3.7
-      CodeUri: ./lambda
+      CodeUri: .
       Description: !Ref LambdaDescription
