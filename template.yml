@@ -6,6 +6,6 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: myLambdaFunction
-      Handler: index-photos-test.lambda_handler
+      Handler: LF1_index-photos.lambda_handler
       Runtime: python3.7
       CodeUri: ./lambda
