@@ -1,17 +1,11 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
 Description: test
-Parameters:
-LambdaName:
-    Description: "index-photos-test"
-    Type: "String"
 Resources:
-  LambdaInstagramWrapper:
+  index-photos-test:
     Type: 'AWS::Serverless::Function'
     Properties:
-      FunctionName: !Ref LambdaName
-      MemorySize: 512
-      Timeout: 60
       Handler: index-photos-test.lambda_handler
       Runtime: python3.7
+      FunctionName: index-photos-test
       CodeUri: ./lambda
