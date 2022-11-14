@@ -1,11 +1,11 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: Python file including external library
+Description: LF2-search-photos with inflect library
 Resources:
- SampleFunction:
+ Function:
   Type: AWS::Serverless::Function
   Properties:
-   Handler: Index.lambda_handler
+   Handler: LF2.lambda_handler
    Runtime: python3.7
-   FunctionName: SamplePython
+   FunctionName: LF2-search-photos
    CodeUri: ./src #Directory the source file is
