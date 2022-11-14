@@ -19,7 +19,7 @@ Resources:
       FunctionName: !Ref LambdaName
       MemorySize: 512
       Timeout: 60
-      Handler: .
+      Handler: index-photos-test.lambda_handler
       Runtime: python3.7
-      CodeUri: .
+      CodeUri: ./lambda
       Description: !Ref LambdaDescription
