@@ -5,21 +5,13 @@ Parameters:
 LambdaName:
     Description: "index-photos-test"
     Type: "String"
-LambdaDescription:
-    Description: ""
-    Type: "String"
-LambdaRole:
-    Description: ""
-    Type: "String"
 Resources:
   LambdaInstagramWrapper:
     Type: 'AWS::Serverless::Function'
     Properties:
-      Role: !Ref LambdaRole
       FunctionName: !Ref LambdaName
       MemorySize: 512
       Timeout: 60
       Handler: index-photos-test.lambda_handler
       Runtime: python3.7
       CodeUri: ./lambda
-      Description: !Ref LambdaDescription
