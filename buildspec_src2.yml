@@ -10,6 +10,7 @@ phases:
    - sam build
    - export BUCKET=b0deploy
    - sam package --s3-bucket $BUCKET --output-template-file outputtemplate_src2.yml
+   - cd ..
 artifacts:
  type: zip
  files:
