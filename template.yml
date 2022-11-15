@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: LF2-search-photos with inflect library
+Resources:
+ Function:
+  Type: AWS::Serverless::Function
+  Properties:
+   Handler: LF2.lambda_handler
+   Runtime: python3.7
+   FunctionName: LF2-search-photos
+   CodeUri: ./src #Directory the source file is
+   timeout: 10
