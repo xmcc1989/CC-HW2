@@ -1,11 +1,20 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: LF2-search-photos with inflect library
+Description: lambda
 Resources:
- Function:
-  Type: AWS::Serverless::Function
-  Properties:
-   Handler: LF2.lambda_handler
-   Runtime: python3.7
-   FunctionName: LF2-search-photos
-   CodeUri: ./src #Directory the source file is
+  Function1:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: LF1.lambda_handler
+      Runtime: python3.7
+      FunctionName: LF1-index-photos
+      CodeUri: ./src/src1 #Directory the source file is
+      timeout: 10
+  Function2:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: LF2.lambda_handler
+      Runtime: python3.7
+      FunctionName: LF2-search-photos
+      CodeUri: ./src/src2 #Directory the source file is
+      timeout: 10

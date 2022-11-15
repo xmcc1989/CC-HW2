@@ -5,11 +5,18 @@ phases:
    python: 3.7
  build: 
   commands:
-   - sam build
-   - export BUCKET=b0deploy
-   - sam package --s3-bucket $BUCKET --output-template-file outputtemplate.yml
+    - touch source1_file
+    - cd $CODEBUILD_SRC_DIR_source2
+    - touch source2_file
 artifacts:
- type: zip
- files:
-  - template.yml
-  - outputtemplate.yml
+  type: zip
+  files:
+  secondary-artifacts:
+    artifact1:
+      base-directory: $CODEBUILD_SRC_DIR
+      files:
+        - source1_file
+    artifact2:
+      base-directory: $CODEBUILD_SRC_DIR_source2
+      files:
+        - source2_file
