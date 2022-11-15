@@ -8,5 +8,5 @@ Resources:
       Handler: $FUNCTION_NAME.lambda_handler
       Runtime: python3.7
       FunctionName: $FUNCTION_NAME
-      CodeUri: ./src/src2 #Directory the source file is
+      CodeUri: ./src2 #Directory the source file is
       Timeout: 10
