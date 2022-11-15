@@ -9,4 +9,4 @@ Resources:
    Runtime: python3.7
    FunctionName: LF2-search-photos
    CodeUri: ./src #Directory the source file is
-   timeout: 10
+   Timeout: 10
