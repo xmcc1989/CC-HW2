@@ -5,8 +5,8 @@ Resources:
   Function2:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: LF2.lambda_handler
+      Handler: $FUNCTION_NAME.lambda_handler
       Runtime: python3.7
-      FunctionName: LF2-search-photos
+      FunctionName: $FUNCTION_NAME
       CodeUri: ./src/src2 #Directory the source file is
-      timeout: 10
+      Timeout: 10
