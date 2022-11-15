@@ -2,11 +2,11 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: lambda
 Resources:
-  Function2:
+  Function1:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: LF2.lambda_handler
+      Handler: LF1.lambda_handler
       Runtime: python3.7
-      FunctionName: LF2-search-photos
-      CodeUri: ./src/src2 #Directory the source file is
+      FunctionName: LF1-index-photos
+      CodeUri: ./src/src1 #Directory the source file is
       timeout: 10
