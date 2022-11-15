@@ -5,6 +5,7 @@ phases:
    python: 3.7
  build: 
   commands:
+   - cd $CODEBUILD_SRC_DIR/src1
    - sam build
    - export BUCKET=b0deploy
    - sam package --s3-bucket $BUCKET --output-template-file outputtemplate_src1.yml
